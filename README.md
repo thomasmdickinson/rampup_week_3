@@ -35,7 +35,13 @@ This week you've got a test suite to show you if your solution is working!  Stop
 
 To run the test suite, you'll need to make sure you have the ```rspec``` gem installed.  In your terminal run:  ```gem install rspec```
 
-Then for each lab, you can run your own code by typing ```ruby filename.rb``` -- or you can run the test suite by typing ```rspec filename.rb```
+Then for each lab, you can run your own code by typing:
+
+```ruby filename.rb```
+
+OR you can run the test suite by typing
+
+```rspec filename.rb```
 
 If you see all passing tests, you're done for the week!
 
