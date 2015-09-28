@@ -30,17 +30,30 @@ end
 ## TEST SECTION -- Run with 'rspec class_leap_years.rb'
 RSpec.describe "Caesar cipher" do
   it "can encrypt a string" do
-    expect(caesar_encrypt("Hello there", 10)).not_to eq "Hello there"
+    expect(caesar_encrypt("hello there", 10)).not_to eq "hello there"
   end
 
-  it "can decrypt a string when given the right offset" do
-    encrypted = caesar_encrypt("Hello there", 10)
-    expect(caesar_decrypt(encrypted, 10)).to eq "Hello there"
+  describe "not case-sensitive" do
+    it "can decrypt a string when given the right offset" do
+      encrypted = caesar_encrypt("hello there", 10)
+      expect(caesar_decrypt(encrypted, 10)).to eq "hello there"
+    end
+
+    it "cannot decrypt a string when given the incorrect offset" do
+      encrypted = caesar_encrypt("hello there", 10)
+      expect(caesar_decrypt(encrypted, 20)).not_to eq "hello there"
+    end
   end
 
-  it "cannot decrypt a string when given the incorrect offset" do
-    encrypted = caesar_encrypt("Hello there", 10)
-    expect(caesar_decrypt(encrypted, 20)).not_to eq "Hello there"
-  end
+  describe "case-sensitive" do
+    it "can decrypt a string when given the right offset" do
+      encrypted = caesar_encrypt("Hello there", 10)
+      expect(caesar_decrypt(encrypted, 10)).to eq "Hello there"
+    end
 
+    it "cannot decrypt a string when given the incorrect offset" do
+      encrypted = caesar_encrypt("Hello there", 10)
+      expect(caesar_decrypt(encrypted, 20)).not_to eq "Hello there"
+    end
+  end
 end

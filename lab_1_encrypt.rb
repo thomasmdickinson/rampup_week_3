@@ -26,26 +26,26 @@ end
 #######################################################
 ## TEST SECTION -- Run with 'rspec class_leap_years.rb'
 RSpec.describe "simple encryption/encoding" do
-  describe "not case-sensitive" do
-    it "can encrypt a string" do
-      expect(encrypt("hello there")).not_to eq "hello there"
-    end
+  it "can encrypt a string" do
+    expect(encrypt("hello there")).not_to eq "hello there"
+  end
 
+  describe "not case-sensitive" do
     it "can decrypt a string" do
       encrypted = encrypt("hello there")
       expect(decrypt(encrypted)).to eq "hello there"
     end
+
+    it "can decrypt a string with punctuation too" do
+      encrypted = encrypt("hello there!")
+      expect(decrypt(encrypted)).to eq "hello there!"
+    end
   end
 
   describe "case-sensitive" do
-    it "can encrypt a string" do
-      expect(encrypt("Hello there")).not_to eq "Hello there"
-    end
-
     it "can decrypt a string" do
       encrypted = encrypt("Hello there")
       expect(decrypt(encrypted)).to eq "Hello there"
     end
   end
-
 end
