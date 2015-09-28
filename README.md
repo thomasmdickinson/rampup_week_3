@@ -15,6 +15,8 @@ Take a string and run it through an ```encrypt()``` method so it is no longer re
 
 Run the encrypted string into a ```decrypt()``` string to bring it back to its original state.
 
+BONUS POINTS: Make the case-sensitive test work
+
 
 ### Lab 2 - Encrypt a string using a Caesar Cipher
 
@@ -23,6 +25,8 @@ http://en.wikipedia.org/wiki/Caesar_cipher
 Take a string and run it through a ```caesar_encrypt()``` method so it is no longer readable.  An offset number is required to set up your letter dictionary to meet the requirements of a Caesar cipher.
 
 Run the encrypted string into a ```decrypt()``` string to bring it back to its original state.  The offset number must be the same as the offset you passed to the encrypt method, otherwise the result will not be readable.
+
+BONUS POINTS: Make the case-sensitive tests work
 
 
 ## Running the test suites
