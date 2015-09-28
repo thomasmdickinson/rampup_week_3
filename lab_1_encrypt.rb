@@ -3,7 +3,9 @@ require 'rspec'
 
 #######################################################
 ## YOUR CODE
-DICTIONARY = Hash[('a'..'z').zip(('a'..'z').to_a.reverse)]
+def get_dictionary
+  Hash[('a'..'z').zip(('a'..'z').to_a.reverse)]
+end
 
 def encrypt(string)
 
