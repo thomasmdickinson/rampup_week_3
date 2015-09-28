@@ -19,25 +19,36 @@ end
 
 
 
-
 #######################################################
 ## TEST SECTION -- Run with 'rspec class_leap_years.rb'
 RSpec.describe "leap year exercise" do
-  it "knows that the Van Halen album title is also a leap year" do
-    expect(leap_years_between(1983, 1985)).to eq [1984]
+  describe "#is_a_leap_year?" do
+    it "knows that the Van Halen album title is also a leap year" do
+      expect(is_a_leap_year(1984)).to eq true
+    end
+
+    it "knows that the year that Back to the Future was released was NOT a leap year" do
+      expect(is_a_leap_year(1985)).to eq false
+    end
   end
 
-  it "returns more than one result" do
-    expect(leap_years_between(1979, 1989)).to eq [1980, 1984, 1988]
-  end
+  describe "#leap_years_between" do
+    it "knows that the Van Halen album title is also a leap year" do
+      expect(leap_years_between(1983, 1985)).to eq [1984]
+    end
 
-  it "is inclusive of the start and end years" do
-    expect(leap_years_between(1980, 1988)).to eq [1980, 1984, 1988]
-  end
+    it "returns more than one result" do
+      expect(leap_years_between(1979, 1989)).to eq [1980, 1984, 1988]
+    end
 
-  it "knows the 100/400 rule" do
-    ## years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400
-    expect(leap_years_between(1600,1600)).to eq [1600]
-    expect(leap_years_between(1800,1800)).to eq []
+    it "is inclusive of the start and end years" do
+      expect(leap_years_between(1980, 1988)).to eq [1980, 1984, 1988]
+    end
+
+    it "knows the 100/400 rule" do
+      ## years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400
+      expect(leap_years_between(1600,1600)).to eq [1600]
+      expect(leap_years_between(1800,1800)).to eq []
+    end
   end
 end
