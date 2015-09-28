@@ -3,14 +3,14 @@ require 'rspec'
 
 #######################################################
 ## YOUR CODE
-dictionary = ('a'..'z').zip(('a'..'z').to_a.reverse)
+dictionary = Hash[('a'..'z').zip(('a'..'z').to_a.reverse)]
 
 def encrypt(string)
-  
+
 end
 
 def decrypt(string)
-  
+
 end
 
 
