@@ -4,7 +4,7 @@ require 'rspec'
 #######################################################
 ## YOUR CODE
 def get_dictionary(offset)
-  ('a'..'z').zip(('a'..'z').to_a...)
+  Hash[*('a'..'z').zip(('a'..'z').to_a...)]
 end
 
 def caesar_encrypt(string, offset)
