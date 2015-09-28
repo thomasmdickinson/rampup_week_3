@@ -24,11 +24,11 @@ end
 RSpec.describe "leap year exercise" do
   describe "#is_a_leap_year?" do
     it "knows that the Van Halen album title is also a leap year" do
-      expect(is_a_leap_year(1984)).to eq true
+      expect(is_a_leap_year?(1984)).to eq true
     end
 
     it "knows that the year that Back to the Future was released was NOT a leap year" do
-      expect(is_a_leap_year(1985)).to eq false
+      expect(is_a_leap_year?(1985)).to eq false
     end
   end
 
