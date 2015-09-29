@@ -30,6 +30,14 @@ RSpec.describe "leap year exercise" do
     it "knows that the year that Back to the Future was released was NOT a leap year" do
       expect(is_a_leap_year?(1985)).to eq false
     end
+
+    it "says 1600 is a leap year" do
+      expec(is_a_leap_year?(1600)).to eq true
+    end
+
+    it "says 1800 is not a leap year" do
+      expect(is_a_leap_year?(1800)).to eq false
+    end
   end
 
   describe "#leap_years_between" do
