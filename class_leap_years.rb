@@ -4,11 +4,11 @@ require 'rspec'
 #######################################################
 ## YOUR CODE
 def is_a_leap_year?(year)
-  (year % 4 == 0) && ...
+  (year % 4 == 0)
 end
 
 def leap_years_between(start_year, end_year)
-  ...
+
 end
 
 
