@@ -21,7 +21,7 @@ end
 #######################################################
 ## MAIN SECTION -- WHAT YOU WANT TO RUN
 
-# puts leap_years_between(1990, 2000)
+ puts leap_years_between(1990, 2000)
 
 
 

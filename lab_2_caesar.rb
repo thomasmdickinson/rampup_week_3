@@ -4,17 +4,33 @@ require 'rspec'
 #######################################################
 ## YOUR CODE
 def get_dictionary(offset)
-  Hash[('a'..'z').zip(('a'..'z').to_a...)]
+  Hash[('a'..'z').zip(('a'..'z').to_a.rotate(offset))].merge(Hash[('A'..'Z').zip(('A'..'Z').to_a.rotate(offset))])
 end
 
 def caesar_encrypt(string, offset)
   dictionary = get_dictionary(offset)
-
+  message_array = string.split(//)
+  message_array.map! do |character|
+    if dictionary.has_key?(character)
+      dictionary[character]
+    else
+      character
+    end
+  end
+  message_array.join
 end
 
 def caesar_decrypt(string, offset)
   dictionary = get_dictionary(offset)
-
+  message_array = string.split(//)
+  message_array.map! do |character|
+    if dictionary.has_value?(character)
+      dictionary.key(character)
+    else
+      character
+    end
+  end
+  message_array.join
 end
 
 
